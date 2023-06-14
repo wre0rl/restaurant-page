@@ -1,4 +1,4 @@
-import Header from "./components/common/Header.js";
+import Header from "./components/Header.js";
 import Home from "./pages/Home.js";
 import Menu from "./pages/Menu.js";
 import Contact from "./pages/Contact.js";
