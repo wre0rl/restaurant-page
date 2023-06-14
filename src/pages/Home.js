@@ -1,7 +1,7 @@
-const home = () => {
+const Home = () => {
   const content = document.createElement('div');
   content.innerText = 'IM HOMEEE!'; 
   return content;
 };
 
-export default home;
+export default Home;

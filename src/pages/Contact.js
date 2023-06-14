@@ -1,7 +1,7 @@
-const contact = () => {
+const Contact = () => {
   const content = document.createElement('div');
   content.innerText = 'IM CONTACT!!!'; 
   return content;
 };
 
-export default contact;
+export default Contact;

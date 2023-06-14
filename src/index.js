@@ -1,38 +1,31 @@
-import CreateHeaderElement from "./components/CreateHeaderElement/CreateHeaderElement.js";
-import CreateNavElement from "./components/CreateNavElement/CreateNavElement.js";
-import home from "./pages/home.js";
-import menu from "./pages/menu.js";
-
-const createHeaderWithNavElement = () => {
-  const body = document.body;
-  const headerElement = CreateHeaderElement();
-  const navElement = CreateNavElement();
-
-  // Header & Nav
-  body.prepend(headerElement);
-  headerElement.appendChild(navElement);
-};
-
-createHeaderWithNavElement();
-
-const nav = document.querySelector('.nav');
-const content = document.querySelector('#content');
+import Header from "./components/common/Header.js";
+import Home from "./pages/Home.js";
+import Menu from "./pages/Menu.js";
+import Contact from "./pages/Contact.js";
 
 const render = (page) => {
   content.textContent = '';
   content.appendChild(page);
 };
 
-// Default page
-render(home());
+// Load Header
+Header();
 
-// Page selector
+const nav = document.querySelector('.nav');
+const content = document.querySelector('#content');
+
+// Default page content
+render(Home());
+
+// Page content selector
 nav.addEventListener('click', (e) => {
   const targetText = e.target.innerText;
 
   if (targetText === 'Home') {
-    render(home());
+    render(Home());
   } else if (targetText === 'Menu') {
-    render(menu());
+    render(Menu());
+  } else if (targetText === 'Contact') {
+    render(Contact());
   }
 });
