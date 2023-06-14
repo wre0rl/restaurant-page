@@ -31,3 +31,7 @@ nav.addEventListener('click', (e) => {
     render(pages[targetText]);
   }
 });
+
+// TODO: 
+// CSS-in-JS webpack
+// CSS styling
