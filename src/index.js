@@ -3,6 +3,12 @@ import Home from "./pages/Home.js";
 import Menu from "./pages/Menu.js";
 import Contact from "./pages/Contact.js";
 
+const pages = {
+  'Home': Home(),
+  'Menu': Menu(),
+  'Contact': Contact()
+};
+
 const render = (page) => {
   content.textContent = '';
   content.appendChild(page);
@@ -21,11 +27,7 @@ render(Home());
 nav.addEventListener('click', (e) => {
   const targetText = e.target.innerText;
 
-  if (targetText === 'Home') {
-    render(Home());
-  } else if (targetText === 'Menu') {
-    render(Menu());
-  } else if (targetText === 'Contact') {
-    render(Contact());
+  if (targetText in pages) {
+    render(pages[targetText]);
   }
 });

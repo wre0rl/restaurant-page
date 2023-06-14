@@ -5,9 +5,16 @@ const createHeaderElement = () => {
 };
 
 const createNavElement = () => {
-  const navItems = ['Home', 'Menu', 'Contact'];
   const navElement = document.createElement('div');
   navElement.classList.add('nav');
+
+  createNavItems(navElement);
+  
+  return navElement;
+};
+
+const createNavItems = (navElement) => {
+  const navItems = ['Home', 'Menu', 'Contact'];
 
   for (const navItem of navItems) {
     const navItemElement = document.createElement('div');
@@ -15,8 +22,6 @@ const createNavElement = () => {
     navItemElement.classList.add('nav__item');
     navElement.appendChild(navItemElement);
   }
-
-  return navElement;
 };
 
 const Header = () => {
