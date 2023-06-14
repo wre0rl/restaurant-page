@@ -1,7 +1,6 @@
 const CreateNavElement = () => {
   const navItems = ['Home', 'Menu', 'Contact'];
   const navElement = document.createElement('div');
-  
   navElement.classList.add('nav');
 
   for (const navItem of navItems) {
