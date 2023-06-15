@@ -1,3 +1,5 @@
+import "../styles/header.css";
+
 const createHeaderElement = () => {
   const headerElement = document.createElement('div');
   headerElement.classList.add('header');
@@ -19,6 +21,7 @@ const createNavItems = (navElement) => {
   for (const navItem of navItems) {
     const navItemElement = document.createElement('div');
     navItemElement.innerText = navItem;
+    navItemElement.id = navItem;
     navItemElement.classList.add('nav__item');
     navElement.appendChild(navItemElement);
   }

@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+.nav__item {
+  cursor: pointer;
+  user-select: none;
+}
